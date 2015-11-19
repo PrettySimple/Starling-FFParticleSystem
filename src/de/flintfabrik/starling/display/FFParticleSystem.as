@@ -668,6 +668,12 @@ package de.flintfabrik.starling.display
 				
 				particleAlpha = particle.colorAlpha * particle.fadeInFactor * particle.fadeOutFactor * mSystemAlpha;
 				
+				if(mPremultipliedAlpha) {
+					red *= particleAlpha;
+					green *= particleAlpha;
+					blue *= particleAlpha;
+				}
+				
 				rotation = particle.rotation;
 				x = particle.x;
 				y = particle.y;
